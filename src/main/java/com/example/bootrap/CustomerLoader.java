@@ -5,10 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
 
 import com.example.domain.Customer;
 import com.example.repository.CustomerRepository;
 
+@Component
 public class CustomerLoader implements ApplicationListener<ContextRefreshedEvent>{
 
 	private CustomerRepository custumerRepository;

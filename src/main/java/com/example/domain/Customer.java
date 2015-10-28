@@ -22,6 +22,9 @@ public class Customer implements Serializable{
 
 	private String description;
 	
+	public Customer() {
+     
+    }
     public Customer(String name) {
         this.name = name;
     }
