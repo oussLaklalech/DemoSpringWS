@@ -1,5 +1,7 @@
 # DemoSpringWS
-Done : Premier Web Service appel√© (GET:/greeting) 
+Done : Premier Web Service appel√© (GET:/greeting)
+Done : Mise en place de SPRING JPA
+Done : Mise en place d'un premier Test (JUNIT)
 TODO : Int√grer une BDD
 TODO : d√velopper davantage de services (POST, GET, DELETE, PUT) 
 TODO : Int√grer les outils de test

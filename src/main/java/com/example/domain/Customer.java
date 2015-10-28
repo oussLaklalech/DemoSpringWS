@@ -1,19 +1,27 @@
 package com.example.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 @Entity
-public class Customer {
+public class Customer implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private long id;
+	
+	@Column(nullable = false)
 	private String name;
 
+	private String description;
+	
     public Customer(String name) {
         this.name = name;
     }
@@ -33,8 +41,18 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
     
-	 @Override
+	 public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
 	 public String toString() {
 	        return "Person [id=" + id + ", name=" + name + "]";
 	    }
