@@ -26,6 +26,13 @@ public class CustomerController {
 	        return (Customer) new Customer("jack");
 	    }
 	    
+	    @RequestMapping("/getAllCustomers")
+	    public Iterable<Customer> getAllCustomers() {
+	    	System.out.println("getAllCustomers");
+	    	return customerRepository.findAll();
+	        
+	    }
+	    
 	    @RequestMapping("/dustring")
 	    public String getStringTest(@RequestParam(value="name", defaultValue="World") String name) {
 	    	System.out.println("du String");

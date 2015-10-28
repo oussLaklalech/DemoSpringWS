@@ -9,11 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableAutoConfiguration
 public class WebConfiguration {
-
 	private final Logger log = LoggerFactory.getLogger(WebConfiguration.class);
-
 	@Bean
     ServletRegistrationBean h2servletRegistration(){
         ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
